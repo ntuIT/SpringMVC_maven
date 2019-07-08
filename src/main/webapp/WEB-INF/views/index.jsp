@@ -8,11 +8,15 @@
 </head>
 <body>
 <h1>Welcome Spring !</h1>
-<h2>Chào khách hàng</h2>
+<h2>Chào </h2><h3>${contactName}</h3>
 <table class="index_info">
     <tr>
-        <td>mã số khách hàng: &nbsp;</td>
-        <td><c:out value="${customer_no}"/></td>
+        <td>Mã hòm thư: </td>
+        <td><c:out value="${customerNo}"/></td>
+    </tr>
+    <tr>
+        <td>Địa chỉ khách hàng: &nbsp;</td>
+        <td><c:out value="${customerAddress}"/></td>
     </tr>
 </table>
 </body>

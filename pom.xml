@@ -7,6 +7,18 @@
     <groupId>jp.ivs</groupId>
     <artifactId>SpringMVC</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <packaging>war</packaging>
     <name>SpringMVC</name>
 
@@ -28,6 +40,12 @@
         </dependency>
         <!--endregion-->
 
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
+        </dependency>
+
         <!--region spring-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -43,11 +61,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${springframework.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>4.3.9.RELEASE</version>
         </dependency>
         <!--endregion-->
     </dependencies>
