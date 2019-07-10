@@ -7,7 +7,8 @@
 </head>
 <body>
     <h2>SINH VIÊN POLY</h2>
-    <form action="student-savedata.html" method="post">
+    <% String path = request.getContextPath(); %>
+    <form action="<%=path%>/student-savedata.htm" method="post">
         <div>Họ và tên: </div> <input name="name"/>
         <div>Điểm trung bình: </div> <input name="mark"/>
         <div>Chuyên ngành: </div> <label>
