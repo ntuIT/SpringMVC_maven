@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Welcome Spring !</h1>
-<h2>Chào </h2><h3>${contactName}</h3>
+<h2>Chào ${contactName}</h2>
 <table class="index_info">
     <tr>
         <td>Mã hòm thư: </td>

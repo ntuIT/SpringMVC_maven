@@ -29,4 +29,30 @@ public class IOHelper
         }
         return customer;
     }
+
+    public static void fixShipperID() throws SQLException
+    {
+        //region chuẩn bị môi trường
+        String update = "UPDATE `groot`.orders SET ShipperID = ? WHERE OrderID = ? ";
+        Connection connection = MySQLhelper.connectToMySQL();
+        Statement command = connection.createStatement();
+        String select = " select OrderID, ShipperID from orders ";
+        ResultSet dataLine = command.executeQuery(select); //endregion
+
+        while (dataLine.next())
+        {
+            int orderId = dataLine.getInt("OrderId");
+            int shipperId = dataLine.getInt("ShipperId");
+            if (shipperId>=90)
+            {
+                shipperId-=90;
+                PreparedStatement writer = connection.prepareStatement(update);
+                writer.setInt(1, shipperId);
+                writer.setInt(2, orderId);
+                writer.executeUpdate();
+                writer.close();
+            }
+        }
+        //
+    }
 }

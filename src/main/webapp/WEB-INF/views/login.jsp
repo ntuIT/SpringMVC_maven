@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>trang chủ</h1>
-    <%--@elvariable id="id" type=""--%>
+    <% String path = request.getContextPath(); %>
+    <a href="<%=path%>/student/show-form.html">Đến trang Student</a>
     <form action="index.html" method="get">
         <table class="index_info">
             <tr>
