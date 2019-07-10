@@ -7,15 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8200903b-e959-4ba4-be54-48bb16666e1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jp/ivs/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/trà sữa.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jp/ivs/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jp/ivs/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql-connector-java.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/taglibs-standard-impl-1.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/taglibs-standard-spec-1.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/css/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/trà sữa.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,7 +88,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/jp/ivs/controller/StudentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
+            <state relative-caret-position="397">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
@@ -125,6 +118,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lab2" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -647,7 +645,7 @@
       <workItem from="1562577804075" duration="11531000" />
       <workItem from="1562726793813" duration="8373000" />
       <workItem from="1562737089287" duration="1800000" />
-      <workItem from="1562755164189" duration="1556000" />
+      <workItem from="1562755164189" duration="2135000" />
     </task>
     <task id="LOCAL-00001" summary="maven">
       <created>1562733903674</created>
@@ -656,11 +654,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562733903674</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="maven">
+      <created>1562759967764</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562759967764</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59358000" />
+    <option name="totallyTimeSpent" value="59937000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,9 +678,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18003026" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18003026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -698,7 +702,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.3298731" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32993197" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.3282313" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -707,7 +711,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.15355521" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.15355521" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="CDI" order="9" />
@@ -1006,7 +1010,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jp/ivs/controller/StudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
+        <state relative-caret-position="397">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
