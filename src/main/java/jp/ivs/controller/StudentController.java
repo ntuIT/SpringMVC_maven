@@ -4,17 +4,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletRequest;
-
+@RequestMapping("student")
 @Controller
 public class StudentController
 {
-    @RequestMapping("/student/show-form")
+    @RequestMapping()
+    public String index()
+    {
+        return "/student/student";
+    }
+
+    @RequestMapping("/show-form")
     public String showStudentForm()
     {
         return "student/form";
     }
 
-    @RequestMapping("/student/student-savedata")
+    @RequestMapping("/student-savedata")
     public String saveForm(ServletRequest request)
     {
         String name = request.getParameter("name");
