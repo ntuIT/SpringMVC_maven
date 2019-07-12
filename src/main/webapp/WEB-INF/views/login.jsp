@@ -9,8 +9,8 @@
 <body>
     <h1>trang chủ</h1>
     <% String path = request.getContextPath(); %>
-    <a href="<%=path%>/student/show-form.htm">Đến trang Student</a>
-    <form action="index.htm" method="get">
+    <a href="<%=path%>/student/show-form.html">Đến trang Student</a>
+    <form action="index.html" method="get">
         <table class="index_info">
             <tr>
                 <td><label class="caption">Nhập mã khách hàng:</label> &nbsp;</td>

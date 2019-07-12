@@ -5,7 +5,7 @@
          version="4.0">
 
     <welcome-file-list>
-        <welcome-file>/student.htm</welcome-file>
+        <welcome-file>/login.html</welcome-file>
     </welcome-file-list>
     
     <context-param>
@@ -28,6 +28,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>maven_vd1</servlet-name>
-        <url-pattern>*.htm</url-pattern>
+        <url-pattern>*.html</url-pattern>
     </servlet-mapping>
 </web-app>

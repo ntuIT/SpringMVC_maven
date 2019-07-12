@@ -21,6 +21,11 @@ public class WelcomeController
     @RequestMapping("/login")
     public String goLogin()
     {
+        try {
+            IOHelper.fixShipperID();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return "login";
     }
 
