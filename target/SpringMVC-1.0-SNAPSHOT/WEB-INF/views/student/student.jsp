@@ -27,7 +27,7 @@
             <button name="btnUpdate">Cập nhật</button>
             <button name="btnDelete">Xóa</button>
             <button name="btnReset">Nhập lại</button>
-            <br><hr align="left" width="360px">
+            <br><hr align="center" width="360px">
         </div>
 
     </form>
