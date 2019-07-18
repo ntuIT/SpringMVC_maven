@@ -1,8 +1,12 @@
 package jp.ivs.helper;
 
-import jp.ivs.model.Customer;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-import java.sql.*;
+import jp.ivs.model.Customer;
 
 public class IOHelper
 {
@@ -30,29 +34,32 @@ public class IOHelper
         return customer;
     }
 
-    public static void fixShipperID() throws SQLException
+    public static void fixOrderDetail() throws SQLException
     {
         //region chuẩn bị môi trường
-        String update = "UPDATE `groot`.orders SET ShipperID = ? WHERE OrderID = ? ";
+        String update = " UPDATE `groot`.`orderdetails` t " +
+                "SET t.`OrderID` = (t.`OrderID`-10247) " +
+                "WHERE  t.`OrderID` = ? and t.OrderID>10000 ";
         Connection connection = MySQLhelper.connectToMySQL();
+        MySQLhelper.setUseDb(connection, "groot");
         Statement command = connection.createStatement();
-        String select = " select OrderID, ShipperID from orders ";
+        String select = " select o.OrderID as 'OrderID', o.OrderDetailID as 'OrderDetailID' "
+             +   " from orderdetails o ";
         ResultSet dataLine = command.executeQuery(select); //endregion
+        System.out.println("chạy đến đây");
 
         while (dataLine.next())
         {
             int orderId = dataLine.getInt("OrderId");
-            int shipperId = dataLine.getInt("ShipperId");
-            if (shipperId>=90)
+            int odId = dataLine.getInt("OrderDetailID");
+            if (orderId>=10000)
             {
-                shipperId-=90;
                 PreparedStatement writer = connection.prepareStatement(update);
-                writer.setInt(1, shipperId);
-                writer.setInt(2, orderId);
+                writer.setInt(1, orderId);
                 writer.executeUpdate();
                 writer.close();
             }
         }
-        //
+        command.close(); connection.close();
     }
 }
