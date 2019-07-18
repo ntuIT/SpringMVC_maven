@@ -1,36 +1,35 @@
 --create
- create table departs
-(   Id int primary key
-    , Name varchar(128) null
-);
+ create table `Departs`
+(   `Id` int primary key
+    , `Name` varchar(128) null
+) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
 
- create table records
-(   Id  int default 0 null primary key
-    , Type bit(1)  null
-    , Reason varchar(255) null
-    , Date date null
-    , StaffId int null
-);
+CREATE TABLE `Staffs` ( `Id` INT(11) NOT NULL
+ , `Name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ , `Gender` BIT(1) NULL
+ , `Birthday` DATE NULL
+ , `Photo` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ , `Email` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ , `Phone` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ , `Salary` DOUBLE NULL
+ , `Notes` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ , `DepartId` INT(11) NULL , PRIMARY KEY (`Id`)
+ ) ENGINE = InnoDB;
 
- create table staffs
-(   Id int primary key
-    , Name varchar(255) null
-    , Gender bit(1) null
-    , Birthday date null
-    , Photo text null
-    , Email text null
-    , Phone text null
-    , Salary float null
-    , Notes varchar(255) null
-    , DepartId int null
-);
-
- create table users
-(   Username varchar(128) primary key
-    , Password varchar(128) not null
-    , Fullname varchar(255) null
-);
-
+CREATE TABLE `Records` ( `Id` INT(11) NOT NULL
+ , `Type` BIT(1) NULL
+ , `Reason` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ , `Date` DATE NULL
+ , `StaffId` INT(11) NULL
+ , PRIMARY KEY (`Id`)
+ ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
+ 
+CREATE TABLE `Users` ( `Username` VARCHAR(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+ , `Password` VARCHAR(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+ , `Fullname` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
+ , PRIMARY KEY (`Username`)
+ ) ENGINE = InnoDB;
+ 
 
 create view RecordDetails AS
 select r.Id AS 'RecordNo'
@@ -39,6 +38,7 @@ select r.Id AS 'RecordNo'
  , r.Date AS 'Date'
  , r.StaffId AS 'StaffNo'
  , s.Name AS 'StaffName'
+ , s.Phone AS 'Contact'
  , s.Email AS 'Email'
  , s.DepartId AS 'DepartNo'
  , d.Name AS 'Department'
