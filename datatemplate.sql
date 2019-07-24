@@ -1,10 +1,10 @@
---create
+#create
  create table `Departs`
-(   `Id` int primary key
+(   `Id` int primary key null AUTO_INCREMENT
     , `Name` varchar(128) null
 ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
 
-CREATE TABLE `Staffs` ( `Id` INT(11) NOT NULL
+CREATE TABLE `Staffs` ( `Id` INT(11) NOT NULL AUTO_INCREMENT
  , `Name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
  , `Gender` BIT(1) NULL
  , `Birthday` DATE NULL
@@ -17,7 +17,7 @@ CREATE TABLE `Staffs` ( `Id` INT(11) NOT NULL
  , `DepartId` INT(11) NULL , PRIMARY KEY (`Id`)
  ) ENGINE = InnoDB;
 
-CREATE TABLE `Records` ( `Id` INT(11) NOT NULL
+CREATE TABLE `Records` ( `Id` INT(11) NOT NULL AUTO_INCREMENT
  , `Type` BIT(1) NULL
  , `Reason` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
  , `Date` DATE NULL
@@ -49,7 +49,7 @@ from ( records r left join
     on s.Id = r.StaffId )
 
 
---data
+#data
 
  INSERT INTO departs (Id, Name) VALUES (0, null )
  , (1, 'IVS')
