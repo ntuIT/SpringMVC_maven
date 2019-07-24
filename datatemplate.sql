@@ -46,7 +46,6 @@ from ( records r left join
     ( staffs s left join departs d
     on s.DepartId = d.Id )
     on s.Id = r.StaffId )
-order by `DepartNo`
 
 
 --data
