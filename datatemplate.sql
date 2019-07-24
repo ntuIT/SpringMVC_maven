@@ -12,6 +12,7 @@ CREATE TABLE `Staffs` ( `Id` INT(11) NOT NULL
  , `Email` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL
  , `Phone` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL
  , `Salary` DOUBLE NULL
+ , `Level` INT(2) NULL
  , `Notes` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL
  , `DepartId` INT(11) NULL , PRIMARY KEY (`Id`)
  ) ENGINE = InnoDB;
