@@ -56,16 +56,16 @@ from ( records r left join
  , (2, 'NTU')
  , (3,  'JAV..A');
  
- INSERT INTO staffs (Id, Name, Gender, Birthday, Photo, Email, Phone, Salary, Notes, DepartId)
- VALUES (0, 'Mạnh', true, null, null, null, null, null, 'ctv Mạnh', 0)
- , (1, 'IVS', null, null, 'IVS Co.Ltd.psd', '*@indivisys.jp', '(+84)-28-3526-1435', null, 'PTHoa and 7Plus', 1)
- , (2, 'Thọ MC', false, null, 'thomc.psd', 'thomc@ntu', '0258 3831 149', null, 'trainer', 2)
- , (3, null, null, null, null, null, null, null, null, 3)
- , (4, 'Vũ Bảnh', false, null, 'Vu.psd', 'captain@', '()', null, 'not bảnh', null)
- , (5, 'trainee 1', false, null, '1.psd', 'luongngando@', '+84', 1000, 'học viên 1 (nv cty)', 1)
- , (6, 'trainee 2', true, null, '2.psd', ' ', ' ', null, 'học viên 2 (fresher)', 1)
- , (7, 'trainee n', null, null, 'anymous.psd', null, null, null, ' ', 2)
- , (8, 'staff', false, null, null, null, null, null, 'học việc', 1);
+ INSERT INTO staffs (Id, Name, Gender, Birthday, Photo, Email, Phone, Salary, Level, Notes, DepartId)
+ VALUES (0, 'Mạnh', true, null, null, null, null, null, null, 'ctv Mạnh', 0)
+ , (1, 'IVS', null, null, 'IVS Co.Ltd.psd', '*@indivisys.jp', '(+84)-28-3526-1435', null, 0, 'PTHoa and 7Plus', 1)
+ , (2, 'Thọ MC', false, null, 'thomc.psd', 'thomc@ntu', '0258 3831 149', null, 1, 'trainer', 2)
+ , (3, null, null, null, null, null, null, null, null, null, 3)
+ , (4, 'Vũ Bảnh', false, null, 'Vu.psd', 'captain@', '()', null, 3, 'not bảnh', null)
+ , (5, 'trainee 1', false, null, '1.psd', 'luongngando@', '+84', 1000, 4, 'học viên 1 (nv cty)', 1)
+ , (6, 'trainee 2', true, null, '2.psd', ' ', ' ', null, 2, 'học viên 2 (fresher)', 1)
+ , (7, 'trainee n', null, null, 'anymous.psd', null, null, 2, null, ' ', 2)
+ , (8, 'staff', false, null, null, null, null, null, 1, 'học việc', 1);
 
 INSERT INTO records (Id, Type, Reason, Date, StaffId)
  VALUES (0, null, 'không vắng buổi nhậu nào', null, 0)
