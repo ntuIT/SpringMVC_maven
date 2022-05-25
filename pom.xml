@@ -23,7 +23,7 @@
     <name>SpringMVC</name>
 
     <properties>
-        <springframework.version>4.3.9.RELEASE</springframework.version>
+        <springframework.version>5.2.22.RELEASE</springframework.version>
     </properties>
 
     <dependencies>
